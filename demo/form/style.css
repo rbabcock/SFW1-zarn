@@ -1,0 +1,379 @@
+/* CSS Document */
+*{
+	margin:0px; padding:0px;
+}
+body,html{
+	margin:0px; padding:0px;
+	text-align:center;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333333;
+}
+body{
+	background:url(images/background.jpg) top center no-repeat #f3fcff;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6,
+pre, form, fieldset, input, textarea, p, blockquote, th, td {margin: 0;padding: 0;}
+table {border-collapse: collapse;border-spacing: 0;}
+fieldset, img { border: 0; }
+address, caption, cite, code, dfn, em, strong, th, var {font-style: normal;font-weight: normal;}
+ol, ul { list-style: none; }
+caption, th { text-align: left; }
+h1,h2,h3,h4,h5,h6 { font-size: 100%; font-weight: normal; }
+q:before, q:after { content:''; }
+abbr, acronym { border: 0; }
+	
+	h3{
+		font-size:24px;
+		font-family:"Trebuchet MS", Tahoma;
+		font-style:italic;
+	}
+	h3, li{
+		padding:10px;
+	}
+	.formleft, .formfull{
+		clear:both;
+	}
+	.formleft{
+		float:left;
+		width:232px;
+	}
+	.formright{
+		float:right;
+		width:232px;
+	}
+	#myform ul{list-style:none;}
+	#myform label{
+		display:block;
+		font-weight:bold;
+		margin-bottom:4px;
+	}
+	#myform input{
+		border:1px inset #666666;
+		float:left;
+	}
+	.formleft input, .formright input{width:220px;}
+	.formfull input{width:460px;}
+	.f_reqs{
+		float:left;
+		color:#FF0000;
+		font-style:italic;
+		font-size:12px;
+		font-weight:normal;
+	}
+	.f_errors{
+		float:left;
+		color:#FF0000;
+		font-style:italic;
+		font-size:12px;
+		font-weight:normal;
+		display:block;
+		clear:both;
+	}
+	#pmeter{
+		display:none;
+		clear:both;
+		float:left;
+		margin-top:4px;
+		background:url(pmeter.jpg) no-repeat;
+		width:222px;
+		height:26px;
+		position:relative;
+	}
+	#pbar{
+		background:url(pbar.jpg) no-repeat;
+		top:0; left:0;
+		width:9px;
+		height:26px;
+		position:absolute;
+	}
+	.verified{color:#009900;}
+	.formhilite{background:#FFFF99;}
+	
+body #f_submit{
+	border:none;
+	width:auto;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #ffffff;
+	padding: 7px 20px;
+	background: -moz-linear-gradient(
+		top,
+		#42aaff 0%,
+		#003366);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#42aaff),
+		to(#003366));
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border: 1px solid #003366;
+	-moz-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.5);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.5);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0.7),
+		0px 1px 0px rgba(255,255,255,0.3);
+}
+
+
+
+.clear{
+	clear:both;
+	margin:0px;
+	padding:0px;
+}
+a:link, a:visited{
+	/*color:#003399;*/
+	color:#f08a28;
+	font-weight:bold;
+	text-decoration:none;
+}
+a:hover{
+	/*color:#FFFFFF;
+	background:#f08a28;*/
+	text-decoration:underline;
+}
+#wrap{
+	width:930px;
+	margin:0px auto; padding:0px;
+	/*margin-top:135px;*/
+}
+#nav1{
+	/*width:130px;*/
+	margin:0px 0px 0px 0px;
+	float:left;
+	padding:10px 0px 10px 0px;
+	background-color:#3ac0eb;
+	text-align:left;
+}
+#nav2{
+	margin:0px 8px 0px 0px;
+	float:left;
+	padding:10px 0px 10px 0px;
+	text-align:left;
+}
+#nav1 a:link, #nav1 a:visited, #nav2 a:link, #nav2 a:visited{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	font-style:normal;
+	font-weight:bold;	
+	color:#FFFFFF;
+	text-decoration:none;
+	padding:5px;
+	margin:5px 5px 5px 5px;
+}
+#nav1 a:hover, #nav2 a:hover{
+	background-color:#FFFFFF;
+	color:#336699;
+}
+#leftnav{
+	float:left;
+	text-align:left;
+	background:url(images/leftnavbg.jpg) top center no-repeat;
+	width:171px;
+}
+#leftnavinside{
+	width:122px;
+	padding:0px;
+	margin:15px 15px 5px 33px;
+}
+#googlewrap{
+	float:left;
+	text-align:left;
+	background:url(images/rightgooglebar.jpg) top center no-repeat;
+	width:174px;
+}
+#googlewrapinside{
+	padding:15px 0px 0px 19px;
+}
+#upperright{
+	margin:42px 0px 0px 0px; float:right; width:175px; padding:0px; text-align:right;
+}
+#upperright a:link, #upperright a:visited{
+	clear:both;
+	color:#FFFFFF;
+	float:right;
+	margin:0px;
+	padding:5px;
+	text-decoration:none;
+}
+#upperright a:hover{
+	text-decoration:none;
+	color:#003399;
+	background-color:#FFFFFF;
+}
+#contentbgwrap{
+	float:left;
+	text-align:left;
+	background:url(images/center-rpt.jpg) top center repeat-y;
+	width:585px;
+}
+#contentbg{
+	float:left; text-align:left;
+	background:url(images/centerbg.jpg) top center no-repeat;
+	width:585px;
+}
+#contentwrap{
+	margin:17px 23px 5px 23px;
+	width:539px;
+}
+.articlebtn a:link, .articlebtn a:visited{
+	clear:both;
+	width:533px;
+	margin:5px 0px 5px 0px;
+	padding:3px;
+	background:#67a9c1;
+	float:left;
+	text-decoration:none;
+	color:#FFFFFF;
+	font-size:13px;
+	/*display:block;*/
+}
+.articlebtn a:hover{
+	cursor:hand;
+	cursor:pointer;
+}
+.pagenav a:link, .pagenav a:visited{
+	float:left;
+	margin:0px 1px;
+	padding:3px;
+	display:block;
+	color:#f08a28;
+	border:1px solid #f08a28;
+}
+.pagenav a:hover{
+	background:#f08a28;
+	color:#FFFFFF;
+}
+.articlewrap{
+	clear:both;
+	width:495px;
+	margin:0 auto;
+	padding:6px;
+	/*background:#FFFFEE;*/
+}
+.topheadline{
+	font-size:28px;
+	font-weight:bolder;
+	font-style:italic;
+	color:#d1dade;
+}
+.funnylogo{
+	float:right;
+	background-color:#336600;
+	color:#FFFFFF;
+	padding:5px 8px 6px 8px;
+	margin:0px;
+	width:50px;
+	text-align:center;
+}
+.gaminglogo{
+	float:right;
+	background-color:#770000;
+	color:#FFFFFF;
+	padding:5px 8px 6px 8px;
+	margin:0px;
+	width:50px;
+	text-align:center;
+}
+.industrylogo{
+	float:right;
+	background-color:#336699;
+	color:#FFFFFF;
+	padding:5px 8px 6px 8px;
+	margin:0px;
+	width:50px;
+	text-align:center;
+}
+.misclogo{
+	float:right;
+	background-color:#FFFFFF;
+	color:#008fb8;
+	padding:5px 8px 6px 8px;
+	margin:0px;
+	width:50px;
+	text-align:center;
+}
+#ajaxmainwrap p{
+	padding:0px;
+	margin:4px 0px 12px 0px;
+}
+
+/* ////////////////////////////////////// COMMENTS CSS
+====================================================== */
+
+.commentswrap{
+	margin:10px auto;
+	padding:0px;
+	background:#e2e9ea;
+	width:444px;
+}
+.commentstop{
+	margin:0px; padding:0px;
+	width:444px;
+	height:12px;
+	background:url(images/commentstop.jpg) no-repeat;
+}
+.commentsbott{
+	margin:0px; padding:0px;
+	width:444px;
+	height:12px;
+	background:url(images/commentsbott.jpg) no-repeat;
+	background-color:#FFFFFF;
+}
+.comment{
+	background:#8c9090;
+	margin:7px auto;
+	padding:6px;
+	color:#FFFFFF;
+	width:400px;
+}
+.timeclass{
+	margin:0px; padding:0px; font-size:10px; font-style:italic; color:#336699;
+}
+
+/* ////////////////////////////////////// COMMENTS CSS
+====================================================== 
+
+.formleft{
+	text-align:right; padding:15px; margin:0px; background-color:#f08a28; color:#FFFFFF; font-weight:bold; width:150px;
+	clear:both; float:left;
+}
+.formright{
+	float:left;
+	text-align:left; padding:15px; margin:0px;
+}
+*/
+/* ////////////////////////////////////// LOGIN PAGE CSS
+====================================================== */
+
+#loginbox{
+	margin:0px 0px 16px 0px;
+}
+.loginboxt td{
+	padding:2px;
+	margin:0px;
+}
+#loginbox input{
+	padding:3px;
+}
+
+.dssheader{font-size:28px; width:auto; color:#3366AA;/*#ABABAB; border-bottom:#e9671f solid 16px;*/ font-weight:bold; padding:0px; margin:30px 11px 11px 11px; line-height:100%;}
+#dss p{color:#333333; font-size:12px; margin:0px 11px 11px 11px;}
+#dss ul{padding:10px;}
+.dlbutton a{float:left; margin:0 0 11px 11px; padding-left:12px; font-family:"Trebuchet MS",Verdana,Sans-Serif; background:#333333; color:#e9671f; width:430px; height:40px; line-height:40px; font-size:16px; text-decoration:none; text-align:left;}
+.dlbutton a:hover{background:#e9671f; color:#333333;}
+.step{font-size:20px; font-family:"Trebuchet MS",Verdana,Sans-Serif; margin:22px 11px 11px 11px;}
+.codes{border-left:20px #e9671f solid; padding:12px; margin:3px 11px 11px 11px; font-size:12px; font-family:Verdana, Arial, Helvetica, sans-serif; color:#DEDEDE; background:#666666;} 
+.codes strong{color:#FFFFFF;}
+.byme{color:#3366AA; margin:0 11px 28px 12px; font-family:"Trebuchet MS",Verdana,Sans-Serif; font-size:14px;}
+.separator{height:7px; background:#CCCCCC; margin:36px 11px 0px 11px;}
+table{margin:11px;}
+.t_rows td{font-size:12px; padding:6px 7px; margin:4px; border:dotted #e9671f 1px;}
+.t_firstrow td{font-size:15px; font-weight:bold; border-bottom:solid 2px #e9671f;}
+#updates td{vertical-align:top; padding:0 8px 0 0;}
