@@ -62,5 +62,85 @@ zarn.prototype = {
 	
 };
 
+// Library utility functions
+/*
+	zarn.ajax({
+		url: "xhr/file.php",
+		type: "GET",
+		success: function(response){},
+		error: function(){},
+		timeout: 8000
+		
+	zarn.ajax({
+	url: "xhr/file.php"
+	success: function(response){}
+	});	
+			
+	});
+*/
+zarn.ajax = function(options){
+	
+	options = {
+		url: options.url || "",
+		type: options.type || "GET",
+		timeout: options.timeout || 8000,
+		success: options.success || function(){},
+		error: options.error || function(){}
+	};
+	
+	setTimeout(function(){
+		if(xhr){
+			xhr.abort();
+		}
+	}, options.timeout);
+	
+	
+	var checkHttp = function(){
+		try{
+			return !xhr.status && location.protocol === "file:" || 
+				(xhr.status >= 200 && xhr.status < 300) ||
+				xhr.status === 304 ||
+				navigator.userAgent.indexOf("Safari") >= 0 && xhr.status === "undefined"
+			;
+		}catch(err){};
+		
+		return false;
+	};
+	
+	var parseData = function(){
+		
+		var ct = xhr.getResponseHeader("content-type");
+		var isxml = ct && ct.indexOf("xml") >= 0;
+		return isxml ? xhr.responseXML : xhr.responseText;
+		
+	};
+	
+	var serialize = function(){};
+	
+	var xhr = new XMLHttpRequest();
+	
+	xhr.open(options.type, options.url, true);
+	
+	xhr.onreadystatechange = function(){
+		if( xhr.readyState === 4 ){
+				
+				var valid = checkHttp();
+				if(valid){
+					//success
+					var response = parseData();
+					options.success( response );
+				}else{
+				// fail
+				options.error(xhr);
+			};
+			
+			xhr = undefined
+		};
+	};
+	
+	xhr.send(null);
+};
+
 zarn.prototype.init.prototype = zarn.prototype;
 
+//end of library
