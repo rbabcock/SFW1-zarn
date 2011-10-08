@@ -85,7 +85,8 @@ zarn.ajax = function(options){
 		type: options.type || "GET",
 		timeout: options.timeout || 8000,
 		success: options.success || function(){},
-		error: options.error || function(){}
+		error: options.error || function(){},
+		data: options.data || {}
 	};
 	
 	setTimeout(function(){
@@ -115,7 +116,13 @@ zarn.ajax = function(options){
 		
 	};
 	
-	var serialize = function(){};
+	var serialize = function(){
+		var ser = [];
+		for(var key in options.data){
+			ser.push( key + "=" + encodeURIComponent(options.data[key]) );
+			// variable = content
+		};
+	};
 	
 	var xhr = new XMLHttpRequest();
 	
