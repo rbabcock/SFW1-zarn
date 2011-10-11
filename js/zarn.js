@@ -122,11 +122,13 @@ zarn.ajax = function(options){
 			ser.push( key + "=" + encodeURIComponent(options.data[key]) );
 			// variable = content
 		};
+		return "?" + ser.join("&");
+		
 	};
 	
 	var xhr = new XMLHttpRequest();
 	
-	xhr.open(options.type, options.url, true);
+	xhr.open(options.type, options.url + serialize(), true);
 	
 	xhr.onreadystatechange = function(){
 		if( xhr.readyState === 4 ){
