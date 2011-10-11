@@ -1,18 +1,18 @@
 (function(){
 	
-	/*var formFields = zarn("#myform input");
+	var header = zarn(".dssheader");
 	
-	formFields.each(function(){
-		
-	});
+	header.css({padding: "20px", border: "2px solid black"});
 	
-	formFields.css({
-		"backgroundColor": "black",
-		"color": "white",
-		"padding": "20px"
-	});
+	var color =  header.getStyle("color");
+
+	console.log(color);
+
+	header.hide();
 	
-	zarn("div").removeClass("Testing");*/
+	setTimeout(function(){
+		header.show();
+	}, 3000);
 	
 	var validationSet = {
 		email: {
