@@ -31,11 +31,32 @@ h2:hover{
 	margin:5px 15px;
 }
 #accordion,#accordion2,#accordion3{margin-bottom:40px;}
+
+#overlay{
+	z-index:1001;
+	background: #444;
+	opacity: 0.9;
+	color:white;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+	display:none;
+}
+
+#overlay p{
+	margin:0;
+	padding:10px;
+}
+
 </style>
 </head>
 
 <body>
-    
+    <div id="overlay"><p>This is an overlay</p></div>
+
 	<div id="accordion">
         <h2 class="toggler">First Option</h2>
         <div class="content">

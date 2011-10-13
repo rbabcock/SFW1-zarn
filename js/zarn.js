@@ -102,6 +102,45 @@ zarn.prototype = {
 			this["on" + evt] = handler;
 		});
 		return this
+	},
+	
+	animate: function(options){
+		options{
+			duration: options.duration || 500,
+			props: options.props || {},
+			easing: options.easing || "easeOutCirc",
+			done: options.done || function(){}
+		};
+		
+		this.each(function(){
+			
+			var that = this;
+			
+			var startVals = {};
+			for(var prop in options.props){
+				startVals[prop] = parseFloat(zarn(this).getStyle(prop) || 0);
+				
+			}
+			
+			var time = 0;
+			var anim = setInterval(function(){}, 30);
+				time += 30;
+				for(var prop in options.props){	
+					var newval = Math[options.easing](time, startVals[prop], options.props[prop] - startVals[prop], options.duration, 2);
+					that.style[prop] = newval + "px";
+				};
+				
+				if(time >= options.duration){
+					clearInterval(anim);
+					for(var prop in options.props){	
+					that.style[prop] = options.props[prop] + "px";
+				};
+					
+					options.done();
+				}
+		});
+		
+		return this
 	}
 	
 };
